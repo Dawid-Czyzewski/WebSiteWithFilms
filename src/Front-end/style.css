@@ -46,7 +46,7 @@ body{
 #footer{
     position: absolute;
     text-align: center;
-    width: 100%;
+    left: 45vw;
     bottom: 0ch;
     font-size: 1vw;
 }
