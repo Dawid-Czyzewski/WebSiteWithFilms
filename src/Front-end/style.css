@@ -22,7 +22,6 @@ ul{
 }
 
 #navBar{
-    background-color: blue;
     font-size: 2vw;
     text-align: center;
     flex: center;
@@ -42,6 +41,14 @@ body{
     margin-top: 3%;
     font-size: 2vw;
     text-align: center;
+}
+
+#footer{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 0ch;
+    font-size: 1vw;
 }
 
 @media screen and (max-width: 900px) {
@@ -88,4 +95,12 @@ body{
 
 .darkModeBody{
     background-color: black;
+}
+
+.notDarkModeNavBar{
+    background-color: red;
+}
+
+.darkModeNavBar{
+    background-color: blue;
 }
