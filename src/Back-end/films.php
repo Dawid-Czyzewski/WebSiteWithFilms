@@ -1,3 +1,6 @@
+<?php
+    include("film.php");
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,6 +21,11 @@
                     <li><a href=""  class="notDarkMode">author</a></li>
                     <button type="button" id="siteColorsButton" onclick="darkMode()">dark mode</button>
                 </ul>   
+            </div>
+            <div id="content">
+                <?php
+                    Film::showFilms();
+                ?>
             </div>
             <div id="footer" class="notDarkMode">
                 Project for portfolio
