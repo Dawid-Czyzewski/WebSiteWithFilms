@@ -6,21 +6,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Dawid Czyżewski">
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="home.js"></script>
         <title>Home</title>
     </head>
-    <body>
+    <body class="darkModeBody" id="body">
         <div id="Contener">
             <div id="navBar">
                 <ul>
-                    <li><a href="index.html">home</a></li>
-                    <li><a href="">films</a></li>
-                    <li><a href="">author</a></li>
+                    <li><a href="index.html" class="darkMode">home</a></li>
+                    <li><a href=""  class="darkMode">films</a></li>
+                    <li><a href=""  class="darkMode">author</a></li>
+                    <button type="button" id="siteColorsButton" onclick="darkMode()">dark mode</button>
                 </ul>   
             </div>
-            <div id="title">
+            <div id="title" class="darkMode">
                 Good Films!
             </div>
-            <div id="textUnderTitle">
+            <div id="textUnderTitle" class="darkMode">
                 This is my Website with films!<br>
                 Site writted in html,css,javascript and php
             </div>
