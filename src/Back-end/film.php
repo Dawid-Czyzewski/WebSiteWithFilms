@@ -1,4 +1,6 @@
 <?php
+    require_once("connectInfo.php");
+
     class Film{
         public int $id;
         public string $title;
@@ -12,6 +14,10 @@
             $this->category = $category;
             $this->id = $id;
             $this->imagePath = $imagePath;
+        }
+
+        public static function showFilms(){
+            
         }
     }
 ?>
