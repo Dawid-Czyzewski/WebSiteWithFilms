@@ -25,30 +25,33 @@ ul{
     font-size: 2vw;
     text-align: center;
     flex: center;
-}
-
-body{
-    background-color:black;
+    font-weight: normal;
 }
 
 #title{
+    font-weight: normal;
     margin-top: 7%;
     font-size: 10vw;
     text-align: center;
 }
 
 #textUnderTitle{
+    font-weight: normal;
     margin-top: 3%;
     font-size: 2vw;
     text-align: center;
 }
 
 #footer{
-    position: absolute;
-    text-align: center;
-    left: 45vw;
-    bottom: 0ch;
-    font-size: 1vw;
+  display: flex;
+  font-weight: normal;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  min-height: 3vh;
 }
 
 @media screen and (max-width: 900px) {
@@ -91,14 +94,19 @@ body{
 
 .notDarkModeBody{
     background-color: white;
+    font-size: 1.5vw;
+    font-weight: bold;
 }
 
 .darkModeBody{
     background-color: black;
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: white;
 }
 
 .notDarkModeNavBar{
-    background-color: red;
+    background-color: purple;
 }
 
 .darkModeNavBar{
@@ -106,5 +114,18 @@ body{
 }
 
 .film{
-    
+    padding: 1vw;
+  
+}
+
+img{
+    border: 2px solid red;
+    width: 20vw;
+    height: 20vw;
+}
+
+#content{
+    margin-left: 4vw;
+    display: flex;
+    flex-wrap: wrap;
 }
