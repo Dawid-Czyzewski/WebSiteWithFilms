@@ -1,5 +1,5 @@
 <?php
-    require_once("connectInfo.php");
+    
 
     class Film{
         public int $id;
@@ -17,7 +17,25 @@
         }
 
         public static function showFilms(){
-            
+            require_once("connectInfo.php");
+
+            $connecttion = new mysqli($serwer,$dataBaseUser,$password,$dataBaseName);
+
+            if($connecttion->errno != 0){
+                echo "Error: ".$connecttion->errno;
+            }else{
+                $sql = "SELECT * FROM film";
+
+                $result = $connecttion->query($sql);
+
+               $row = $result->fetch_assoc();
+
+                echo '<div class = "film">';
+                echo "<image src = ".$row["imagePath"].">";
+                echo '</div>';
+            }
+
+            $connecttion->close();
         }
     }
 ?>
