@@ -19,25 +19,31 @@
         public static function showFilms(){
             require_once("connectInfo.php");
 
-            $connecttion = new mysqli($serwer,$dataBaseUser,$password,$dataBaseName);
+            $connection = new mysqli($serwer,$dataBaseUser,$password,$dataBaseName);
 
-            if($connecttion->errno != 0){
-                echo "Error: ".$connecttion->errno;
+            if($connection->errno != 0){
+                echo "Error: ".$connection->errno;
             }else{
                 $sql = "SELECT * FROM film";
 
-                $result = $connecttion->query($sql);
+                $result = $connection->query($sql);
 
-                $row = $result->fetch_assoc();
+               
 
-                $film = new film($row["id"],$row["title"],$row["category"],$row["director"],$row["imagePath"]);
+                while($row = $result->fetch_assoc()){
+                    $film = new film($row["id"],$row["title"],$row["category"],$row["director"],$row["imagePath"]);
 
-                echo '<div class = "film">';
-                echo "<image src = ".$film->imagePath.">";
-                echo '</div>';
+                    echo '<div class = "film">';
+                    echo "<img src = ".$film->imagePath.">"."<br>";
+                    echo '<div>';
+                    echo "Title: ".$film->title."<br>"." Direction: ".$film->director."<br>"." category: ".$film->category;
+                    echo "</div>";
+                    echo '</div>';
+                }
+                
             }
 
-            $connecttion->close();
+            $connection->close();
         }
     }
 ?>
