@@ -28,10 +28,12 @@
 
                 $result = $connecttion->query($sql);
 
-               $row = $result->fetch_assoc();
+                $row = $result->fetch_assoc();
+
+                $film = new film($row["id"],$row["title"],$row["category"],$row["director"],$row["imagePath"]);
 
                 echo '<div class = "film">';
-                echo "<image src = ".$row["imagePath"].">";
+                echo "<image src = ".$film->imagePath.">";
                 echo '</div>';
             }
 
