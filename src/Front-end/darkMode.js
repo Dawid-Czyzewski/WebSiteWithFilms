@@ -70,7 +70,7 @@ function darkMode(){
             for(let i=0; i<a.length; i++) {
                 a[i].classList.remove("notDarkMode");
                 a[i].classList.add("darkMode");
-            }  
+            }
 
         }else if(navBar.classList.contains("darkModeNavBar")){
 
@@ -86,9 +86,8 @@ function darkMode(){
             for(let i=0; i<a.length; i++) {
                 a[i].classList.remove("darkMode");
                 a[i].classList.add("notDarkMode");
-            }  
+            } 
         }
-        
     }
 }
 
