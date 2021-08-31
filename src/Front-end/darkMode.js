@@ -1,4 +1,5 @@
 function darkMode(){
+
     if(document.title == "Home"){
         const title = document.getElementById("title");
         const navBar = document.getElementById("navBar");
@@ -88,7 +89,43 @@ function darkMode(){
                 a[i].classList.add("notDarkMode");
             } 
         }
+    }if(document.title == "Author"){
+        const navBar = document.getElementById("navBar");
+        const body = document.getElementById("body");
+        const footer = document.getElementById("footer");
+        const a = document.getElementsByTagName("a");
+
+        if(footer.classList.contains("darkMode")){
+
+            navBar.classList.remove("darkModeNavBar");
+            navBar.classList.add("notDarkModeNavBar");
+
+            body.classList.remove("darkModeBody");
+            body.classList.add("notDarkModeBody");
+
+            footer.classList.remove("darkMode");
+            footer.classList.add("notDarkMode");
+
+        for(let i=0; i<a.length; i++) {
+            a[i].classList.remove("darkMode");
+            a[i].classList.add("notDarkMode");
+        }  
+            
+        }else if(footer.classList.contains("notDarkMode")){
+
+            navBar.classList.remove("notDarkModeNavBar");
+            navBar.classList.add("darkModeNavBar");
+
+            body.classList.remove("notDarkModeBody");
+            body.classList.add("darkModeBody");
+
+            footer.classList.remove("notDarkMode");
+            footer.classList.add("darkMode");
+
+            for(let i=0; i<a.length; i++) {
+                a[i].classList.remove("notDarkMode");
+                a[i].classList.add("darkMode");
+            }  
+        }
     }
 }
-
-
