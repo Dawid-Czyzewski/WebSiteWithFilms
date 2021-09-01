@@ -19,11 +19,7 @@
                     <li><a href="../Front-end/index.html" class="notDarkMode">home</a></li
                     <li><a href="films.php"  class="notDarkMode">films</a></li>
                     <li><a href="../Front-end/author.html"  class="notDarkMode">author</a></li>
-<<<<<<< HEAD
                     <button type="button" id="siteColorsButton" onclick="filmsDarkMode()">dark mode</button>
-=======
-                    <button type="button" id="siteColorsButton" onclick="darkMode()">dark mode</button>
->>>>>>> a39cec4a8a168bea621d613d9f1f65ef8202f46a
                 </ul>   
             </div>
             <div id="content">
