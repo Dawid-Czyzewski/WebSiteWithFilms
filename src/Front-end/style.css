@@ -129,3 +129,11 @@ img{
     display: flex;
     flex-wrap: wrap;
 }
+
+#authorContent{
+    text-align: left;
+    font-size: 3vw;
+    margin-left: 20vw;
+    margin-top: 11vw;
+    width: 80vw;
+}
