@@ -19,7 +19,7 @@
         public static function showFilms(){
             require_once("connectInfo.php");
 
-            $connection = new mysqli($serwer,$dataBaseUser,$password,$dataBaseName);
+            $connection = new mysqli($serwer,$user,$password,$dataBaseName);
 
             if($connection->errno != 0){
                 echo "Error: ".$connection->errno;
